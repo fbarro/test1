@@ -3349,7 +3349,7 @@ section {
 
 @media (min-width: 768px) {
 .services .content {
-    padding: 80px;
+    padding: 45px;
   }
 }
 
@@ -3662,3 +3662,55 @@ section {
 .welcome_txt {
   color: #bf9a4d;
 }
+
+.body_bg {
+  background: rgb(228,187,101);
+  background: linear-gradient(90deg, rgba(215,206,199,1) 0%, rgba(215,206,199,1) 33%, rgba(255,255,255,1) 100%);
+}
+
+.col-form-label{
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.apply_text {
+  font-size: 14px;
+}
+
+.blink {
+  -webkit-animation: blink .75s linear infinite;
+  -moz-animation: blink .75s linear infinite;
+  -ms-animation: blink .75s linear infinite;
+  -o-animation: blink .75s linear infinite;
+  animation: blink .75s linear infinite;
+ }
+ @-webkit-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  50.01% { opacity: 0; }
+  100% { opacity: 0; }
+ }
+ @-moz-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  50.01% { opacity: 0; }
+  100% { opacity: 0; }
+ }
+ @-ms-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  50.01% { opacity: 0; }
+  100% { opacity: 0; }
+ }
+ @-o-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  50.01% { opacity: 0; }
+  100% { opacity: 0; }
+ }
+ @keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  50.01% { opacity: 0; }
+  100% { opacity: 0; }
+ }
