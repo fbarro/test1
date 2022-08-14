@@ -3598,14 +3598,15 @@ section {
 }
 
 .overlay_text{
-  font-size: 40px;
+  font-size: 30px;
   color: white;
   font-weight: 600!important;
   text-align: left!important;
   text-shadow: 0.08em 0.08em 0.08em rgba(0,0,0,0.4)!important;
-  padding: 18px 19px;
-  border-radius: 24px;
+  padding: 15px 16px;
+  border-radius: 28px;
   background-color: rgb(219 210 191 / 29%);
+  float: right;
 }
 
 .about .tab-content h4 {
@@ -3675,6 +3676,11 @@ section {
 
 .apply_text {
   font-size: 14px;
+}
+
+.client_flg {
+  max-height: 20px;
+  vertical-align: baseline;
 }
 
 .blink {
