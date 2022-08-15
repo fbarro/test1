@@ -976,31 +976,178 @@
               <input type="number" class="form-control form-control-sm" id="yearGraduated" name="yearGraduated" onKeyPress="if(this.value.length==4) return false;">
             </div>
           </div>
+          <br>
+          <h5>EMPLOYMENT BACKGROUND</h5>
+          <hr>
           <div class="row g-3">
-            <div class="form-group col-md-6">
-              <label for="inputCity" class="col-form-label col-form-label-sm font-weight-bold">City</label>
-              <input type="text" class="form-control form-control-sm" id="inputCity">
+            <div class="form-group col-md-7">
+              <label for="nameOfEmployer" class="col-form-label col-form-label-sm font-weight-bold">1) Name of Employer:</label>
+              <input type="text" class="form-control form-control-sm" id="nameOfEmployer" name="nameOfEmployer" maxlength="108" value=""  required>
+              <div class="invalid-feedback">
+                Please enter a valid name of employer.
+              </div>
             </div>
-            <div class="form-group col-md-4">
-              <label for="inputState" class="col-form-label col-form-label-sm font-weight-bold">State</label>
-              <select id="inputState" class="form-control form-control-sm">
-                <option selected>Choose...</option>
-                <option>...</option>
+            <div class="form-group col-md-5">
+              <label for="course" class="col-form-label col-form-label-sm font-weight-bold">Position:</label>
+              <input type="text" class="form-control form-control-sm" id="position" name="position" maxlength="80" value=""  required>
+              <div class="invalid-feedback">
+                Please enter a valid position.
+              </div>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="form-group col-md-3">
+              <label for="yearFrom" class="col-form-label col-form-label-sm font-weight-bold">From (Year):</label>
+              <input type="number" class="form-control form-control-sm" id="yearFrom" name="yearFrom" maxlength="5" value="" required>
+              <div class="invalid-feedback">
+                Please enter a valid Year From.
+              </div>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="yearTo" class="col-form-label col-form-label-sm font-weight-bold">To (Year):</label>
+              <input type="text" class="form-control form-control-sm" id="yearTo" name="yearTo" maxlength="5" value="" required>
+              <div class="invalid-feedback">
+                Please enter a valid Year To.
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="countryEmployer1" class="col-form-label col-form-label-sm font-weight-bold">Country</label>
+              <select id="countryEmployer1" name="countryEmployer1" class="form-select form-select-sm" required>
+                <option selected>Choose Country</option>
+              </select>
+              <div class="invalid-feedback">
+                Please enter a country.
+              </div>
+            </div>
+          </div>
+
+          <hr>
+          <div class="row g-3">
+            <div class="form-group col-md-7">
+              <label for="course" class="col-form-label col-form-label-sm font-weight-bold">2) Name of Employer:</label>
+              <input type="text" class="form-control form-control-sm" id="nameOfEmployer1" name="nameOfEmployer1" maxlength="108" value=""  required>
+              <div class="invalid-feedback">
+                Please enter a valid name of employer.
+              </div>
+            </div>
+            <div class="form-group col-md-5">
+              <label for="course" class="col-form-label col-form-label-sm font-weight-bold">Position:</label>
+              <input type="text" class="form-control form-control-sm" id="position1" name="position1" maxlength="80" value=""  required>
+              <div class="invalid-feedback">
+                Please enter a valid position.
+              </div>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="form-group col-md-3">
+              <label for="yearFrom" class="col-form-label col-form-label-sm font-weight-bold">From (Year):</label>
+              <input type="number" class="form-control form-control-sm" id="yearFrom1" name="yearFrom1" maxlength="5" value="" required>
+              <div class="invalid-feedback">
+                Please enter a valid Year From.
+              </div>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="yearTo" class="col-form-label col-form-label-sm font-weight-bold">To (Year):</label>
+              <input type="text" class="form-control form-control-sm" id="yearTo1" name="yearTo1" maxlength="5" value="" required>
+              <div class="invalid-feedback">
+                Please enter a valid Year To.
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="countryEmployer1" class="col-form-label col-form-label-sm font-weight-bold">State</label>
+              <select id="countryEmployer1" name="countryEmployer1" class="form-select form-select-sm" required>
+                <option selected>Choose Country</option>
+              </select>
+              <div class="invalid-feedback">
+                Please enter a country.
+              </div>
+            </div>
+          </div>
+
+          <hr>
+          <div class="row g-3">
+            <div class="form-group col-md-7">
+              <label for="nameOfEmployer2" class="col-form-label col-form-label-sm font-weight-bold">3) Name of Employer:</label>
+              <input type="text" class="form-control form-control-sm" id="nameOfEmployer2" name="nameOfEmployer2" maxlength="108" value=""  required>
+              <div class="invalid-feedback">
+                Please enter a valid name of employer.
+              </div>
+            </div>
+            <div class="form-group col-md-5">
+              <label for="position2" class="col-form-label col-form-label-sm font-weight-bold">Position:</label>
+              <input type="text" class="form-control form-control-sm" id="position2" name="position2" maxlength="80" value=""  required>
+              <div class="invalid-feedback">
+                Please enter a valid position.
+              </div>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="form-group col-md-3">
+              <label for="yearFrom2" class="col-form-label col-form-label-sm font-weight-bold">From (Year):</label>
+              <input type="number" class="form-control form-control-sm" id="yearFrom2" name="yearFrom2" maxlength="5" value="" required>
+              <div class="invalid-feedback">
+                Please enter a valid Year From.
+              </div>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="yearTo2" class="col-form-label col-form-label-sm font-weight-bold">To (Year):</label>
+              <input type="text" class="form-control form-control-sm" id="yearTo2" name="yearTo2" maxlength="5" value="" required>
+              <div class="invalid-feedback">
+                Please enter a valid Year To.
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="countryEmployer2" class="col-form-label col-form-label-sm font-weight-bold">Country</label>
+              <select id="countryEmployer2" name="countryEmployer2" class="form-select form-select-sm" required>
+                <option selected>Choose Country</option>
+              </select>
+              <div class="invalid-feedback">
+                Please enter a country.
+              </div>
+            </div>
+          </div>
+          <hr>
+          <br>
+          <div class="row mb-3 g-3">
+            <label for="optionBaby" class="col-sm-6 col-form-label col-form-label-sm">&gt; Do you have experience in taking care of babies?</label>
+            <div class="col-sm-2">
+              <select id="optionBaby" name="optionBaby" class="form-select form-select-sm" required>
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
               </select>
             </div>
-            <div class="form-group col-md-2">
-              <label for="inputZip" class="col-form-label col-form-label-sm font-weight-bold">Zip</label>
-              <input type="text" class="form-control form-control-sm" id="inputZip">
+            <div class="col-sm-4"></div>
+          </div>
+          <div class="row g-3">
+            <div class="form-group col-md-12">
+              <label for="optionBabyYes" class="col-form-label col-form-label-sm font-weight-bold">If Yes: Please write down the age and gender, and how long you take care of them:</label>
+              <textarea class="form-control" name="optionBabyYes" id="optionBabyYes" rows="2" cols="15" style="width: 60%;"></textarea>
+              <div class="invalid-feedback" id="optionBabyYesText">
+              </div>
             </div>
           </div>
-          <div class="form-group">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck">
-              <label class="form-check-label" class="col-form-label col-form-label-sm font-weight-bold" for="gridCheck">
-                Check me out
-              </label>
+
+          <br>
+          <div class="row mb-3 g-3">
+            <label for="optionElderly" class="col-sm-6 col-form-label col-form-label-sm">&gt; Do you have experience in taking care of elderly?</label>
+            <div class="col-sm-2">
+              <select id="optionElderly" name="optionElderly" class="form-select form-select-sm" required>
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+              </select>
+            </div>
+            <div class="col-sm-4"></div>
+          </div>
+          <div class="row g-3">
+            <div class="form-group col-md-12">
+              <label for="optionBabyYes" class="col-form-label col-form-label-sm font-weight-bold">If YES: Please write down the age and gender, their condition (bedridden, diabetic
+                etc.) and how long you take care of them:</label>
+              <textarea class="form-control" name="optionElderlyYes" id="optionElderlyYes" rows="2" cols="15" style="width: 60%;"></textarea>
+              <div class="invalid-feedback" id="optionElderlyYesText">
+              </div>
             </div>
           </div>
+
           <hr>
           <h5>Upload Required Files:</h5>
           <div class="row g-3">
