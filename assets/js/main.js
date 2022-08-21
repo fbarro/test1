@@ -319,3 +319,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }, false)
     })
 })()
+
+
+$.noConflict();
+jQuery(document).ready(function(){
+  jQuery.getJSON('assets/js/countries.json', function(data) {         
+    console.log(data);
+  });
+});
