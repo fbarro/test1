@@ -3456,13 +3456,15 @@ a.linkedin{
 
 @media only screen and (min-width: 981px){
   .et-fixed-header#top-header, .et-fixed-header#top-header #et-secondary-nav li ul {
-    background-color: #aa8944!important;
+    background: rgb(170 137 68);
+    background: linear-gradient(90deg, rgb(54, 54, 55) 0%, rgba(170,137,68,1) 45%);
   }
 }
 
 @media only screen and (min-width: 981px){
   .et-fixed-header#top-header, .et-fixed-header#top-header #et-secondary-nav li ul {
-      background-color: #aa8944!important;
+    background: rgb(170 137 68);
+    background: linear-gradient(90deg, rgb(54, 54, 55) 0%, rgba(170,137,68,1) 45%);
   }
 }
 .et_fixed_nav #main-header, .et_fixed_nav #top-header {
@@ -3474,7 +3476,8 @@ a.linkedin{
     left: 0;
 } */
 #top-header, #et-secondary-nav li ul {
-    background-color: #aa8944!important;
+    background: rgb(170 137 68);
+    background: linear-gradient(90deg, rgb(54, 54, 55) 0%, rgba(170,137,68,1) 45%);
 }
 
 .et-social-icons_ul {

@@ -311,6 +311,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
+        } else {
+          
         }
 
         form.classList.add('was-validated')
