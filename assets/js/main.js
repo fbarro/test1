@@ -321,9 +321,27 @@ document.addEventListener('DOMContentLoaded', () => {
 })()
 
 
-$.noConflict();
+// $.noConflict();
 jQuery(document).ready(function(){
+  var countryEmployerObj = $("#countryEmployer");
+  var countryEmployer1Obj = $("#countryEmployer1");
+  var countryEmployer2Obj = $("#countryEmployer2");
+
   jQuery.getJSON('assets/js/countries.json', function(data) {         
     console.log(data);
+
+    countryEmployerObj.empty();
+    countryEmployer1Obj.empty();
+    countryEmployer2Obj.empty();
+    for(let i = 0; i < data.length; i++){
+      var country = data[i];
+      countryEmployerObj.append("<option value='"+country.text+"' >"+country.text+"</option>");
+      countryEmployer1Obj.append("<option value='"+country.text+"' >"+country.text+"</option>");
+      countryEmployer2Obj.append("<option value='"+country.text+"' >"+country.text+"</option>");
+    }
+    countryEmployerObj.fSelect('destroy').fSelect('create');
+    countryEmployer1Obj.fSelect('destroy').fSelect('create');
+    countryEmployer2Obj.fSelect('destroy').fSelect('create');
+
   });
 });
