@@ -321,27 +321,32 @@ document.addEventListener('DOMContentLoaded', () => {
 })()
 
 
-$.noConflict();
+var $j = jQuery.noConflict();
 jQuery(document).ready(function(){
-  let countryEmployerObj = jQuery("#countryEmployer");
-  let countryEmployer1Obj = jQuery("#countryEmployer1");
-  let countryEmployer2Obj = jQuery("#countryEmployer2");
+  let countryEmployerObj = $j("#countryEmployer");
+  let countryEmployer1Obj = $j("#countryEmployer1");
+  let countryEmployer2Obj = $j("#countryEmployer2");
 
-  jQuery.getJSON('https://trial.mobiscroll.com/content/countries.json', function(data) {         
+  $j.getJSON('https://trial.mobiscroll.com/content/countries.json', function(data) {         
     console.log(data);
 
     countryEmployerObj.empty();
     countryEmployer1Obj.empty();
     countryEmployer2Obj.empty();
-    // countryEmployerObj.append("<option>Choose Country</option>");
+    countryEmployerObj.append("<option selected disabled value=''>Choose Country</option>");
+    countryEmployer1Obj.append("<option selected disabled value=''>Choose Country</option>");
+    countryEmployer2Obj.append("<option selected disabled value=''>Choose Country</option>");
     for(let i = 0; i < data.length; i++){
       let country = data[i];
-      let selected = '';
-      if(country.text == 'Philippines') selected = 'selected';
 
-      countryEmployerObj.append("<option value='"+country.text+"' "+selected+">"+country.text+"</option>");
-      countryEmployer1Obj.append("<option value='"+country.text+"' "+selected+">"+country.text+"</option>");
-      countryEmployer2Obj.append("<option value='"+country.text+"' "+selected+">"+country.text+"</option>");
+      countryEmployerObj.append("<option value='"+country.text+"'>"+country.text+"</option>");
+      countryEmployer1Obj.append("<option value='"+country.text+"'>"+country.text+"</option>");
+      countryEmployer2Obj.append("<option value='"+country.text+"'>"+country.text+"</option>");
     }
+
+    $j('.input-group.date').datepicker({
+      autoclose: true,
+      format: "mm/dd/yyyy"
+   });
   });
 });
