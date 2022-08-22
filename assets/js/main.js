@@ -321,27 +321,27 @@ document.addEventListener('DOMContentLoaded', () => {
 })()
 
 
-// $.noConflict();
+$.noConflict();
 jQuery(document).ready(function(){
-  var countryEmployerObj = $("#countryEmployer");
-  var countryEmployer1Obj = $("#countryEmployer1");
-  var countryEmployer2Obj = $("#countryEmployer2");
+  let countryEmployerObj = jQuery("#countryEmployer");
+  let countryEmployer1Obj = jQuery("#countryEmployer1");
+  let countryEmployer2Obj = jQuery("#countryEmployer2");
 
-  jQuery.getJSON('assets/js/countries.json', function(data) {         
+  jQuery.getJSON('https://trial.mobiscroll.com/content/countries.json', function(data) {         
     console.log(data);
 
     countryEmployerObj.empty();
     countryEmployer1Obj.empty();
     countryEmployer2Obj.empty();
+    // countryEmployerObj.append("<option>Choose Country</option>");
     for(let i = 0; i < data.length; i++){
-      var country = data[i];
-      countryEmployerObj.append("<option value='"+country.text+"' >"+country.text+"</option>");
-      countryEmployer1Obj.append("<option value='"+country.text+"' >"+country.text+"</option>");
-      countryEmployer2Obj.append("<option value='"+country.text+"' >"+country.text+"</option>");
-    }
-    countryEmployerObj.fSelect('destroy').fSelect('create');
-    countryEmployer1Obj.fSelect('destroy').fSelect('create');
-    countryEmployer2Obj.fSelect('destroy').fSelect('create');
+      let country = data[i];
+      let selected = '';
+      if(country.text == 'Philippines') selected = 'selected';
 
+      countryEmployerObj.append("<option value='"+country.text+"' "+selected+">"+country.text+"</option>");
+      countryEmployer1Obj.append("<option value='"+country.text+"' "+selected+">"+country.text+"</option>");
+      countryEmployer2Obj.append("<option value='"+country.text+"' "+selected+">"+country.text+"</option>");
+    }
   });
 });

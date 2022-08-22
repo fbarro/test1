@@ -791,6 +791,7 @@
 
       <!-- Modal body -->
       <div class="modal-body body_bg">
+        <div class="status-msg"></div>
         <form class="needs-validation" novalidate>
           <div class="row g-3">
             <div class="form-group col-md-6">
@@ -959,7 +960,10 @@
               </div>
             </div>
           </div>
-
+          <br>
+          <br>
+          <h5><strong>Educational Background</strong></h5>
+          <hr>
           <div class="row g-3">
             <div class="form-group col-md-10">
               <label for="nameOfSchool" class="col-form-label col-form-label-sm font-weight-bold">Name Of School (High School):</label>
@@ -975,6 +979,7 @@
               <input type="number" class="form-control form-control-sm" id="yearGraduated" name="yearGraduated" onKeyPress="if(this.value.length==4) return false;"  value="" required>
             </div>
           </div>
+          <hr>
           <div class="row g-3">
             <div class="form-group col-md-10">
               <label for="nameOfSchool2" class="col-form-label col-form-label-sm font-weight-bold">Name Of School (College/Vocational):</label>
@@ -997,8 +1002,10 @@
               <input type="number" class="form-control form-control-sm" id="yearGraduated" name="yearGraduated" onKeyPress="if(this.value.length==4) return false;">
             </div>
           </div>
+          <hr>
           <br>
-          <h5>EMPLOYMENT BACKGROUND</h5>
+          <br>
+          <h5><strong>Employment Background</strong></h5>
           <hr>
           <div class="row g-3">
             <div class="form-group col-md-7">
@@ -1174,14 +1181,14 @@
           <div class="row g-3">
             <div class="form-group col-md-6">
               <p></p>
-              <label for="passport" class="col-sm-6 col-form-label col-form-label-sm"  style="font-size: 11px;">Upload UMID</label>
+              <label for="passport" class="col-sm-6 col-form-label col-form-label-sm"  style="font-size: 11px;">Upload UMID (Required)</label>
               <div class="custom-file">
                 <input type="file" class="custom-file-input form-control form-control-sm" id="umid" name="umid">
               </div>
             </div>
             <div class="form-group col-md-6">
               <label for="photo" class="col-sm-12 col-form-label col-form-label-sm" style="font-size: 11px;">Upload Whole Body Picture (White Background in Casual attire) for
-                CARETAKERS / 2x2 picture for FACTORY WORKERS</label>
+                CARETAKERS / 2x2 picture for FACTORY WORKERS (Required)</label>
               <div class="custom-file">
                 <input type="file" class="custom-file-input form-control form-control-sm" id="photo" name="photo">
               </div>
@@ -1199,10 +1206,18 @@
               </div>
             </div>
           </div>
+          <br/>
+          <div class="row g-3">
+            <div class="col-sm-2">
+              <label>Captcha</label> 
+              <div class="g-recaptcha" data-sitekey="6LebQpghAAAAAF3CHgAXXDTh1_yj80BNVy5pjosD"></div>
+            </div>
+          </div>
           <br>
           <hr>
           <div class="float-end">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+            <input type="hidden" name="g-recaptcha-response" value="" id="g-recaptcha-response">
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
           </div>
         </form>
@@ -1213,6 +1228,7 @@
 </div>
 
   <!-- Vendor JS Files -->
+  <script src="assets/js/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -1220,7 +1236,7 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="https://www.google.com/recaptcha/api.js"></script>
-  <script src="assets/js/jquery.min.js"></script>
+  
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
