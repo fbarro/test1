@@ -34,7 +34,7 @@
     /*
      * Send email to admin
      */
-    $to     = 'mvfproims@gmail.com';
+    $to     = 'applymvfpro@gmail.com';
     $subject= 'Taiwan Application';
     
     $htmlContent = '
