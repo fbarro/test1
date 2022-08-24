@@ -20,7 +20,6 @@
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css'>
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
@@ -75,7 +74,7 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
-      <a class="menu_apply_now btn-getstarted scrollto" data-bs-toggle="modal" data-bs-target="#myModal" href="#">Apply Now</a>
+      <a class="menu_apply_now btn-getstarted" data-bs-toggle="modal" data-bs-target="#myModal" href="#">Apply Now</a>
       <!-- <a href="index.html#jobopenings" class="menu_apply_now btn-getstarted scrollto">Apply Now</a> -->
     </div>
   </header><!-- End Header -->
@@ -182,7 +181,7 @@
               <video width="380" height="260" controls>
                 <source src="assets/video/MVFPro.mp4" type="video/mp4">
                 <source src="movie.ogg" type="video/ogg">
-              Your browser does not support the video tag.
+              	Your browser does not support the video tag.
               </video>
               <!-- <img src="assets/img/about.jpg" class="img-fluid" alt=""> -->
             </div>
@@ -793,19 +792,15 @@
 
       <!-- Modal body -->
       <div class="modal-body body_bg">
-        <div class="status-msg"></div>
-        <form class="needs-validation" novalidate>
+        <div class="status-msg" id="statusMsg"></div>
+        <form class="needs-validation" id="profileform" enctype="multipart/form-data" novalidate>
           <div class="row g-3">
             <div class="form-group col-md-6">
               <label for="inputEmail4" class="col-form-label col-form-label-sm font-weight-bold">Position Applied For:</label>
-              <!-- <select id="inputState" class="form-control form-control-sm" required> -->
-              <select class="form-select" id="position" name="position" required>
-                <option value="CARE TAKER / DOMESTIC HELPER">CARE TAKER / DOMESTIC HELPER</option>
-                <option value="FACTORY WORKER">FACTORY WORKER</option>
+              <select class="form-select" id="positionApplied" name="positionApplied" required>
+                <option value="CARETAKER">CARE TAKER / DOMESTIC HELPER</option>
+                <option value="FACTORYWORKER">FACTORY WORKER</option>
               </select>
-              <div class="invalid-feedback">
-                Please select a Position Applied For.
-              </div>
             </div>
             <div class="form-group col-md-3">&nbsp;</div>
           </div>
@@ -855,11 +850,14 @@
                 </div>
               </div>
             </div>
-            <div class="form-group col-md-1">
+            <div class="form-group col-md-2">
               <label for="age" class="col-form-label col-form-label-sm font-weight-bold">Age:</label>
-              <input type="number" class="form-control form-control-sm" id="age" name="age" maxlength="12" readonly required>
+              <input type="number" class="form-control form-control-sm" id="age" name="age" maxlength="12" required>
+              <div class="invalid-feedback">
+                Please enter a valid age.
+              </div>
             </div>
-            <div class="form-group col-md-5">
+            <div class="form-group col-md-4">
               <label for="placeOfBirth" class="col-form-label col-form-label-sm font-weight-bold">Place of Birth:</label>
               <input type="input" class="form-control form-control-sm" id="placeOfBirth" name="placeOfBirth" maxlength="45"required>
               <div class="invalid-feedback">
@@ -988,7 +986,7 @@
               <label for="yearGraduated" class="col-form-label col-form-label-sm font-weight-bold">Year Graduated:</label>
               <input type="number" class="form-control form-control-sm" id="yearGraduated" name="yearGraduated" onKeyPress="if(this.value.length==4) return false;"  value="" required>
               <div class="invalid-feedback">
-                Please enter a valid name of school.
+                Please enter a year graduated.
               </div>
             </div>
           </div>
@@ -1057,7 +1055,8 @@
             <div class="form-group col-md-6">
               <label for="countryEmployer" class="col-form-label col-form-label-sm font-weight-bold">Country</label>
               <select id="countryEmployer" name="countryEmployer" class="form-select form-select-sm" required>
-                <option selected>Choose Country</option>
+                <option selected disabled>Choose Country</option>
+                <option value="asas">Choose Country222</option>
               </select>
               <div class="invalid-feedback">
                 Please enter a country.
@@ -1100,7 +1099,7 @@
             <div class="form-group col-md-6">
               <label for="countryEmployer1" class="col-form-label col-form-label-sm font-weight-bold">State</label>
               <select id="countryEmployer1" name="countryEmployer1" class="form-select form-select-sm" >
-                <option selected>Choose Country</option>
+                <option selected disabled>Choose Country</option>
               </select>
               <div class="invalid-feedback">
                 Please enter a country.
@@ -1143,7 +1142,7 @@
             <div class="form-group col-md-6">
               <label for="countryEmployer2" class="col-form-label col-form-label-sm font-weight-bold">Country</label>
               <select id="countryEmployer2" name="countryEmployer2" class="form-select form-select-sm" >
-                <option selected>Choose Country</option>
+                <option selected disabled>Choose Country</option>
               </select>
               <div class="invalid-feedback">
                 Please enter a country.
@@ -1152,45 +1151,53 @@
           </div>
           <hr>
           <br>
-          <div class="row mb-3 g-3">
-            <label for="optionBaby" class="col-sm-5 col-form-label col-form-label-sm"  style="font-size: 11px;">2) Do you have experience in taking care of babies?</label>
-            <div class="col-sm-2">
-              <select id="optionBaby" name="optionBaby" class="form-select form-select-sm">
-                <option value="No">No</option>
-                <option value="Yes">Yes</option>
-              </select>
-            </div>
-            <div class="col-sm-4"></div>
+          
+          <div id="caretakerPart">
+          	  <h6><strong>To be filled up by Caretaker Applicant Only</strong></h6>
+          	  <hr>
+	          <div class="row mb-3 g-3">
+	            <label for="optionBaby" class="col-sm-5 col-form-label col-form-label-sm"  style="font-size: 11px;">2) Do you have experience in taking care of babies?</label>
+	            <div class="col-sm-2">
+	              <select id="optionBaby" name="optionBaby" class="form-select form-select-sm">
+	                <option value="No">No</option>
+	                <option value="Yes">Yes</option>
+	              </select>
+	            </div>
+	            <div class="col-sm-4"></div>
+	          </div>
+	          <div class="row g-3">
+	            <div class="form-group col-md-12">
+	              <label for="optionBabyYes" class="col-form-label col-form-label-sm font-weight-bold"  style="font-size: 11px;">If Yes: Please write down the age and gender, and how long you take care of them:</label>
+	              <textarea class="form-control" name="optionBabyYes" id="optionBabyYes" rows="2" cols="15" style="width: 60%;" required></textarea>
+	              <div class="invalid-feedback" id="optionBabyYesText">
+	              	Please put NA if not applicable.
+	              </div>
+	            </div>
+	          </div>
+	
+	          <br>
+	          <div class="row mb-3 g-3">
+	            <label for="optionElderly" class="col-sm-5 col-form-label col-form-label-sm"  style="font-size: 11px;">2) Do you have experience in taking care of elderly?</label>
+	            <div class="col-sm-2">
+	              <select id="optionElderly" name="optionElderly" class="form-select form-select-sm">
+	                <option value="No">No</option>
+	                <option value="Yes">Yes</option>
+	              </select>
+	            </div>
+	            <div class="col-sm-4"></div>
+	          </div>
+	          <div class="row g-3">
+	            <div class="form-group col-md-12">
+	              <label for="optionBabyYes" class="col-form-label col-form-label-sm font-weight-bold"  style="font-size: 11px;">If YES: Please write down the age and gender, their condition (bedridden, diabetic
+	                etc.) and how long you take care of them:</label>
+	              <textarea class="form-control" name="optionElderlyYes" id="optionElderlyYes" rows="2" cols="15" style="width: 60%;" required></textarea>
+	              <div class="invalid-feedback" id="optionElderlyYesText">
+	              	Please put NA if not applicable.
+	              </div>
+	            </div>
+	          </div>
           </div>
-          <div class="row g-3">
-            <div class="form-group col-md-12">
-              <label for="optionBabyYes" class="col-form-label col-form-label-sm font-weight-bold"  style="font-size: 11px;">If Yes: Please write down the age and gender, and how long you take care of them:</label>
-              <textarea class="form-control" name="optionBabyYes" id="optionBabyYes" rows="2" cols="15" style="width: 60%;"></textarea>
-              <div class="invalid-feedback" id="optionBabyYesText">
-              </div>
-            </div>
-          </div>
-
-          <br>
-          <div class="row mb-3 g-3">
-            <label for="optionElderly" class="col-sm-5 col-form-label col-form-label-sm"  style="font-size: 11px;">2) Do you have experience in taking care of elderly?</label>
-            <div class="col-sm-2">
-              <select id="optionElderly" name="optionElderly" class="form-select form-select-sm">
-                <option value="No">No</option>
-                <option value="Yes">Yes</option>
-              </select>
-            </div>
-            <div class="col-sm-4"></div>
-          </div>
-          <div class="row g-3">
-            <div class="form-group col-md-12">
-              <label for="optionBabyYes" class="col-form-label col-form-label-sm font-weight-bold"  style="font-size: 11px;">If YES: Please write down the age and gender, their condition (bedridden, diabetic
-                etc.) and how long you take care of them:</label>
-              <textarea class="form-control" name="optionElderlyYes" id="optionElderlyYes" rows="2" cols="15" style="width: 60%;"></textarea>
-              <div class="invalid-feedback" id="optionElderlyYesText">
-              </div>
-            </div>
-          </div>
+          
 
           <hr>
           <h5>Upload Required Files:</h5>
@@ -1199,14 +1206,14 @@
               <p></p>
               <label for="passport" class="col-sm-6 col-form-label col-form-label-sm"  style="font-size: 11px;">Upload UMID (Required)</label>
               <div class="custom-file">
-                <input type="file" class="custom-file-input form-control form-control-sm" id="umid" name="umid" required>
+                <input type="file" class="custom-file-input form-control form-control-sm" id="umid" name="umid" >
               </div>
             </div>
             <div class="form-group col-md-6">
               <label for="photo" class="col-sm-12 col-form-label col-form-label-sm" style="font-size: 11px;">Upload Whole Body Picture (White Background in Casual attire) for
                 CARETAKERS / 2x2 picture for FACTORY WORKERS (Required)</label>
               <div class="custom-file">
-                <input type="file" class="custom-file-input form-control form-control-sm" id="photo" name="photo" required>
+                <input type="file" class="custom-file-input form-control form-control-sm" id="photo" name="photo" >
               </div>
             </div>
             <div class="form-group col-md-6">
@@ -1232,7 +1239,9 @@
           <br>
           <hr>
           <div class="float-end">
-            <button type="submit" class="btn btn-primary">Submit Application</button>
+            <!--  button type="submit" class="btn btn-primary">Submit Application</button-->
+            <!-- <button type="button" class="btn btn-primary submitBtn" id="sendApp">SUBMIT</button> -->
+            <input type="submit" id="submitBtn" class="btn btn-primary" value="Submit Application">
             <input type="hidden" name="g-recaptcha-response" value="" id="g-recaptcha-response">
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
           </div>
@@ -1247,6 +1256,7 @@
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap-datepicker.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="assets/js/jbvalidator.js"></script> -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>

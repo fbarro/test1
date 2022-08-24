@@ -297,28 +297,51 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
-  'use strict'
+// // Example starter JavaScript for disabling form submissions if there are invalid fields
+// (function () {
+//   'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
+//   // Fetch all the forms we want to apply custom Bootstrap validation styles to
+//   var forms = document.querySelectorAll('.needs-validation')
 
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        } else {
-          
-        }
+//   // Loop over them and prevent submission
+//   Array.prototype.slice.call(forms)
+//     .forEach(function (form) {
+//       form.addEventListener('submit11', function (event) {
+//         if (!form.checkValidity()) {
+//           event.preventDefault()
+//           event.stopPropagation()
+//         } else {
+//         	$j.ajax({
+//                 type:'POST',
+//                 url:'submit_form.php',
+//                 data:'contactFrmSubmit=1&name='+name+'&email='+email+'&message='+message,
+//                 beforeSend: function () {
+//                     $('.submitBtn').attr("disabled","disabled");
+//                     $('.modal-body').css('opacity', '.5');
+//                 },
+//                 success:function(msg){
+//                     if(msg == 'ok'){
+//                         $('#inputName').val('');
+//                         $('#inputEmail').val('');
+//                         $('#inputMessage').val('');
+//                         $('.statusMsg').html('<span style="color:green;">Thanks for contacting us, we\'ll get back to you soon.</p>');
+//                     }else{
+//                         $('.statusMsg').html('<span style="color:red;">Some problem occurred, please try again.</span>');
+//                     }
+//                     $('.submitBtn').removeAttr("disabled");
+//                     $('.modal-body').css('opacity', '');
+//                 }, 
+//                 error: function(e){
+//                 	$('.statusMsg').html('<span style="color:red;">Some problem occurred, please try again.</span>');
+//                 }
+//             });
+//         }
 
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
+//         form.classList.add('was-validated')
+//       }, false)
+//     })
+// })()
 
 
 var $j = jQuery.noConflict();
@@ -327,7 +350,7 @@ jQuery(document).ready(function(){
   let countryEmployer1Obj = $j("#countryEmployer1");
   let countryEmployer2Obj = $j("#countryEmployer2");
 
-  $j.getJSON('https://trial.mobiscroll.com/content/countries.json', function(data) {         
+  $j.getJSON('countries.json', function(data) {         
     console.log(data);
 
     countryEmployerObj.empty();
@@ -343,10 +366,108 @@ jQuery(document).ready(function(){
       countryEmployer1Obj.append("<option value='"+country.text+"'>"+country.text+"</option>");
       countryEmployer2Obj.append("<option value='"+country.text+"'>"+country.text+"</option>");
     }
-
-    $j('.input-group.date').datepicker({
+  });
+  
+  $j('.input-group.date').datepicker({
       autoclose: true,
       format: "mm/dd/yyyy"
    });
+  
+  $j('#positionApplied').on('change', function() {
+	  if(this.value=='CARETAKER'){
+		  $j('#caretakerPart').removeClass('d-none');
+	  } else {
+		  $j('#caretakerPart').addClass('d-none');
+	  }
   });
 });
+
+const validFields = {'positionApplied' : 'Position Applied For',
+'lastName' : 'Last Name', 'firstName' : 'First Name','middleName' : 'Middle Name',
+'passportNo' : 'Passport No', 'birthdate' : 'Birth Date', 'age' : 'Age',
+'placeOfBirth' :'Place Of Birth', 'address' : 'Address', 'mobileNo' : 'Mobile No',
+'height' :'Height', 'weight' : 'Weight',
+'fatherName' :"Father's Name", 'motherName' : "Mother\'s Name", 
+'noOfBrothers' :"No Of Brothers", 'noOfSisters' : 'No Of Sisters', 'spouseName' :"Husband's Name",
+'noOfChildren' : 'No. of Children', 'ageOfEldestChild' : 'Age Of Eldest Child', 'ageOfYoungestChild' : 'Age Of Youngest Child',
+'nameOfSchool' : 'Name Of School (High School)', 'yearGraduated' : 'Year Graduated',
+'nameOfSchool2' : 'Name Of School (College/Vocational)', 'course' : 'Course', 'yearGraduated' : 'Year Graduated',
+'nameOfEmployer' :'Name Of Employer', 'position' : 'Position', 'yearFrom' : 'Year (From)', 'yearTo' : 'Year (To)', 'countryEmployer' : 'Country',
+'nameOfEmployer1' :'Name Of Employer~NR', 'position1' : 'Position~NR', 'yearFrom1' : 'Year (From)~NR', 'yearTo1' : 'Year (To)~NR', 'countryEmployer1' : 'Country~NR',
+'nameOfEmployer2' :'Name Of Employer~NR', 'position2' : 'Position~NR', 'yearFrom2' : 'Year (From)~NR', 'yearTo2' : 'Year (To)~NR', 'countryEmployer2' : 'Country~NR'};
+
+(function() {
+  'use strict';
+  $j(window).on('load', function() {
+    $j('.needs-validation').on('submit', function(e) {
+      
+      if (!this.checkValidity()) {
+        e.preventDefault();
+        e.stopPropagation();
+      } else {
+        alert($j("#lastName").val());
+        submitContactForm(this, e);
+      }
+
+      $j(this).addClass('was-validated');
+    });
+  });
+})();
+
+function submitContactForm(formData, event){
+    event.preventDefault();
+    event.stopPropagation();
+
+    // let dataForm = '';
+    // let ctr = 0;
+    // let len = list.length;
+    // for(var key in list) {
+    //    let keyVal = key +'='+$j('#'+key).val();;
+       
+    //    dataForm = dataForm + keyVal;
+
+    //    ctr++;
+    //    if(len<ctr) dataForm = dataForm + '&';
+    // }
+
+    var fd = new FormData(formData);
+    // var umid = $('#umid')[0].files;
+    // var photo = $('#photo')[0].files;
+    // var birthCert = $('#birthCert')[0].files;
+    // var passport = $('#passport')[0].files;
+
+    // if(umid.length > 0 ){
+    //   fd.append('umid',umid[0]);
+    // }
+
+    // if(photo.length > 0 ){
+    //   fd.append('photo',photo[0]);
+    // }
+
+    // if(birthCert.length > 0 ){
+    //   fd.append('birthCert',birthCert[0]);
+    // }
+
+    // if(passport.length > 0 ){
+    //   fd.append('passport',passport[0]);
+    // }
+
+    $j.ajax({
+        type:'POST',
+        url:'submit_form.php',
+        data: fd,
+        beforeSend: function () {
+            $j('.submitBtn').attr("disabled","disabled");
+            $j('.modal-body').css('opacity', '.5');
+        },
+        success:function(msg){
+            if(msg == 'ok'){
+                $j('.statusMsg').html('<span style="color:green;">Thanks for submitting your application to us, we\'ll get back to you soon.</p>');
+            }else{
+                $j('.statusMsg').html('<span style="color:red;">Some problem occurred, please try again.</span>');
+            }
+            $j('.submitBtn').removeAttr("disabled");
+            $j('.modal-body').css('opacity', '');
+        }
+    });
+}
