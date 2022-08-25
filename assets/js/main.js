@@ -351,14 +351,12 @@ jQuery(document).ready(function(){
   let countryEmployer2Obj = $j("#countryEmployer2");
 
   $j.getJSON('countries.json', function(data) {         
-    console.log(data);
-
     countryEmployerObj.empty();
     countryEmployer1Obj.empty();
     countryEmployer2Obj.empty();
-    countryEmployerObj.append("<option selected disabled value=''>Choose Country</option>");
-    countryEmployer1Obj.append("<option selected disabled value=''>Choose Country</option>");
-    countryEmployer2Obj.append("<option selected disabled value=''>Choose Country</option>");
+    countryEmployerObj.append("<option selected value=''>Choose Country</option>");
+    countryEmployer1Obj.append("<option selected value=''>Choose Country</option>");
+    countryEmployer2Obj.append("<option selected value=''>Choose Country</option>");
     for(let i = 0; i < data.length; i++){
       let country = data[i];
 
@@ -373,13 +371,13 @@ jQuery(document).ready(function(){
       format: "mm/dd/yyyy"
    });
   
-  $j('#positionApplied').on('change', function() {
-	  if(this.value=='CARETAKER'){
-		  $j('#caretakerPart').removeClass('d-none');
-	  } else {
-		  $j('#caretakerPart').addClass('d-none');
-	  }
-  });
+  // $j('#positionApplied').on('change', function() {
+	//   if(this.value=='CARETAKER'){
+	// 	  $j('#caretakerPart').removeClass('d-none');
+	//   } else {
+	// 	  $j('#caretakerPart').addClass('d-none');
+	//   }
+  // });
 });
 
 const validFields = {'positionApplied' : 'Position Applied For',
@@ -405,7 +403,6 @@ const validFields = {'positionApplied' : 'Position Applied For',
         e.preventDefault();
         e.stopPropagation();
       } else {
-        alert($j("#lastName").val());
         submitContactForm(this, e);
       }
 
@@ -453,21 +450,30 @@ function submitContactForm(formData, event){
     // }
 
     $j.ajax({
-        type:'POST',
-        url:'submit_form.php',
-        data: fd,
-        beforeSend: function () {
-            $j('.submitBtn').attr("disabled","disabled");
-            $j('.modal-body').css('opacity', '.5');
-        },
-        success:function(msg){
-            if(msg == 'ok'){
-                $j('.statusMsg').html('<span style="color:green;">Thanks for submitting your application to us, we\'ll get back to you soon.</p>');
-            }else{
-                $j('.statusMsg').html('<span style="color:red;">Some problem occurred, please try again.</span>');
-            }
-            $j('.submitBtn').removeAttr("disabled");
-            $j('.modal-body').css('opacity', '');
-        }
-    });
+      type:'POST',
+      url:'submit_form.php',
+      data:  new FormData(formData),
+      contentType: false,
+      cache: false,
+      processData:false,
+      beforeSend: function () {
+          $j('.submitBtn').attr("disabled","disabled");
+      },
+      success:function(msg){
+        console.log(msg);
+          if(msg == 'ok'){
+              alert('Thanks for submitting your application to us, we\'ll get back to you soon');
+          } else if(msg == 'invalid'){
+              alert('Please fill up required fields.');
+          }else{
+              alert('Something went wrong, please try again.');
+          }
+          $j('#submitBtn').removeAttr("disabled");
+          $j("#profileform")[0].reset(); 
+      },
+      error: function (jqXHR, textStatus, errorThrown) { 
+         $j('.submitBtn').removeAttr("disabled");
+         alert('Something went wrong, please try again.');
+      }
+  });
 }
