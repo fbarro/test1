@@ -51,31 +51,28 @@
             <li class="top-phone menu-item menu-item-type-custom menu-item-object-custom menu-item-104">
               <i class="bi bi-phone flex-shrink-0"></i> +632 398 3955
             </li>
-            <li class="top-phone menu-item menu-item-type-custom menu-item-object-custom menu-item-104">
-              <a href="https://www.facebook.com/mvfproims/" style="color: #fff;"><i class="bi bi-facebook flex-shrink-0"></i> @mvfproims</a> 
-            </li>
           </ul>			
         </div> <!-- #et-secondary-menu -->
       </div> <!-- .container -->
     </div>
     <div class="container-fluid d-flex align-items-center justify-content-between adjust-pad">
       <span class="logo_helper"></span>
-      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+      <a href="/" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <img src="assets/img/mvf3_logo.png" alt="" class="img-fluid">
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html#about">About Us</a></li>
-          <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="index.html#jobopenings">Job Openings</a></li>
-          <li><a class="nav-link scrollto" href="index.html#clients">Clients</a></li>
-          <li><a class="nav-link scrollto" href="index.html#contact">Contact Us</a></li>
+          <li><a class="nav-link scrollto" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="index2.php#about">About Us</a></li>
+          <li><a class="nav-link scrollto" href="index2.php#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="index2.php#jobopenings">Job Openings</a></li>
+          <li><a class="nav-link scrollto" href="index2.php#clients">Clients</a></li>
+          <li><a class="nav-link scrollto" href="index2.php#contact">Contact Us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
       <a class="menu_apply_now btn-getstarted" data-bs-toggle="modal" data-bs-target="#myModal" href="#">Apply Now</a>
-      <!-- <a href="index.html#jobopenings" class="menu_apply_now btn-getstarted scrollto">Apply Now</a> -->
+      <!-- <a href="index2.php#jobopenings" class="menu_apply_now btn-getstarted scrollto">Apply Now</a> -->
     </div>
   </header><!-- End Header -->
 
@@ -86,41 +83,33 @@
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
 		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="4000">
-          <img src="assets/img/hero-carousel/teams/pic5.jpg" class="d-block w-100" alt="taiwan">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img src="assets/img/hero-carousel/qatar.jpg" class="d-block w-100" alt="qatar">
           <div class="carousel-caption d-none d-md-block">
-            <span class="overlay_text">Your Job is our Mission!</span>
+            <span class="overlay_text">You Job is our Mission!</span>
             <p>&nbsp;</p>
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="4000">
-          <img src="assets/img/hero-carousel/teams/pic2.jpg" class="d-block w-100" alt="qatar">
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="assets/img/hero-carousel/maldives.jpg" class="d-block w-100" alt="maldives">
           <div class="carousel-caption d-none d-md-block">
-            <span class="overlay_text">Your Job is our Mission!</span>
+            <span class="overlay_text">You Job is our Mission!</span>
             <p>&nbsp;</p>
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="4000">
-          <img src="assets/img/hero-carousel/teams/pic3.jpg" class="d-block w-100" alt="maldives">
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="assets/img/hero-carousel/taiwan.png" class="d-block w-100" alt="taiwan">
           <div class="carousel-caption d-none d-md-block">
-            <span class="overlay_text">Your Job is our Mission!</span>
+            <span class="overlay_text">You Job is our Mission!</span>
             <p>&nbsp;</p>
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="4000">
-          <img src="assets/img/hero-carousel/teams/pic4.jpg" class="d-block w-100" alt="romania">
+	    	<div class="carousel-item" data-bs-interval="5000">
+          <img src="assets/img/hero-carousel/romania.jpg" class="d-block w-100" alt="romania">
           <div class="carousel-caption d-none d-md-block">
-            <span class="overlay_text">Your Job is our Mission!</span>
-            <p>&nbsp;</p>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="4000">
-          <img src="assets/img/hero-carousel/teams/pic1.jpg" class="d-block w-100" alt="taiwan">
-          <div class="carousel-caption d-none d-md-block">
-            <span class="overlay_text">Your Job is our Mission!</span>
+            <span class="overlay_text">You Job is our Mission!</span>
             <p>&nbsp;</p>
           </div>
         </div>
@@ -152,7 +141,7 @@
             <p class="p_fsize14">MVFpro International was established on 2017. However, Ms. Myra’s vast work experience in the Manpower and Recruitment Industry spans two decades.
                She was Incorporator, Operations Manager, Vice-Chairman and Marketing Director of several Manpower Agencies.</p>
 
-			<!--a class="cta-btn align-self-start" href="index.html#about">Learn More</a-->
+			<!--a class="cta-btn align-self-start" href="index2.php#about">Learn More</a-->
           </div>
 
           <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
@@ -178,12 +167,7 @@
 
           <div class="col-lg-5">
             <div class="about-img">
-              <video width="380" height="260" controls>
-                <source src="assets/video/MVFPro.mp4" type="video/mp4">
-                <source src="movie.ogg" type="video/ogg">
-              	Your browser does not support the video tag.
-              </video>
-              <!-- <img src="assets/img/about.jpg" class="img-fluid" alt=""> -->
+              <img src="assets/img/aboutus_2.jpg" class="img-fluid" alt="">
             </div>
           </div>
 
@@ -729,13 +713,13 @@
           <div class="col-lg-4 col-md-6 footer-links">
             <h4>Quick Links</h4>
             <ul>
-              <li><i class="bi bi-chevron-double-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bi bi-chevron-double-right"></i> <a href="index.html#about">About us</a></li>
-              <li><i class="bi bi-chevron-double-right"></i> <a href="index.html#jobopenings">Job Openings</a></li>
-              <li><i class="bi bi-chevron-double-right"></i> <a href="index.html#clients">Clients</a></li>
-              <li><i class="bi bi-chevron-double-right"></i> <a href="index.html#team">Team</a></li>
-              <li><i class="bi bi-chevron-double-right"></i> <a href="index.html#contact">Contact Us</a></li>
-              <li><i class="bi bi-chevron-double-right"></i> <a href="policy.html">Privacy policy</a></li>
+              <li><i class="bi bi-chevron-double-right"></i> <a href="index2.php">Home</a></li>
+              <li><i class="bi bi-chevron-double-right"></i> <a href="index2.php#about">About us</a></li>
+              <li><i class="bi bi-chevron-double-right"></i> <a href="index2.php#jobopenings">Job Openings</a></li>
+              <li><i class="bi bi-chevron-double-right"></i> <a href="index2.php#clients">Clients</a></li>
+              <li><i class="bi bi-chevron-double-right"></i> <a href="index2.php#team">Team</a></li>
+              <li><i class="bi bi-chevron-double-right"></i> <a href="index2.php#contact">Contact Us</a></li>
+              <li><i class="bi bi-chevron-double-right"></i> <a href="private_policy.html">Privacy policy</a></li>
             </ul>
           </div>
 
@@ -769,485 +753,16 @@
 
   <!-- START Bootstrap-Cookie-Alert -->
 <div class="alert text-center cookiealert" role="alert">
-  We use cookies to ensure that we give you the best user experience on our website. By continued use, you agree to our <a href="policy.html" target="_blank">privacy policy</a> and accept our use of such cookies.
+  We use cookies to ensure that we give you the best user experience on our website. By continued use, you agree to our <a href="private_policy.html" target="_blank">privacy policy</a> and accept our use of such cookies.
   <button type="button" class="btn btn-primary btn-sm acceptcookies">
       I agree
   </button>
 </div>
 <!-- END Bootstrap-Cookie-Alert -->
 
-  <!-- The Modal -->
-  <div class="modal fade" id="myModal">
-    <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header body_bg">
-        <h6><strong>This form is for TAIWAN APPLICANTS ONLY.</strong> For other countries, please email your
-          CV and valid passport copy to <strong>applymvfpro@gmail.com</strong>. Put in the Subject Line the
-          position you are applying for.</h6>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body body_bg">
-        <div class="status-msg" id="statusMsg"></div>
-        <form class="needs-validation" id="profileform" enctype="multipart/form-data" novalidate>
-          <div class="row g-3">
-            <div class="form-group col-md-6">
-              <label for="inputEmail4" class="col-form-label col-form-label-sm font-weight-bold">Position Applied For:</label>
-              <select class="form-select" id="positionApplied" name="positionApplied" required>
-                <option value="CARE TAKER / DOMESTIC HELPER">CARE TAKER / DOMESTIC HELPER</option>
-                <option value="FACTORY WORKER">FACTORY WORKER</option>
-              </select>
-            </div>
-            <div class="form-group col-md-3">&nbsp;</div>
-          </div>
-          <div class="row g-3">
-            <div class="form-group col-md-4">
-              <label for="lastName" class="col-form-label col-form-label-sm font-weight-bold">Last Name:</label>
-              <input type="input" class="form-control form-control-sm" id="lastName" name="lastName" maxlength="50" required>
-              <div class="invalid-feedback">
-                Please enter a valid last name.
-              </div>
-            </div>
-            <div class="form-group col-md-4">
-              <label for="firstName" class="col-form-label col-form-label-sm font-weight-bold">First Name:</label>
-              <input type="input" class="form-control form-control-sm" id="firstName" name="firstName" maxlength="45" required>
-              <div class="invalid-feedback">
-                Please enter a valid first name.
-              </div>
-            </div>
-            <div class="form-group col-md-4">
-              <label for="middleName" class="col-form-label col-form-label-sm font-weight-bold">Middle Name:</label>
-              <input type="input" class="form-control form-control-sm" id="middleName" name="middleName" maxlength="45" required>
-              <div class="invalid-feedback">
-                Please enter a valid middle name.
-              </div>
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="form-group col-md-3">
-              <label for="passportNo" class="col-form-label col-form-label-sm font-weight-bold">Passport No:</label>
-              <input type="input" class="form-control form-control-sm" id="passportNo" name="passportNo" maxlength="35" required>
-              <div class="invalid-feedback">
-                Please enter a valid passport no.
-              </div>
-            </div>
-
-            <div class="form-group col-md-3">
-              <label for="birthdate" class="col-form-label col-form-label-sm font-weight-bold">Birthday(mm/dd/yyyy):</label>
-              <div class="input-group date" id="datepicker">
-                <input type="input" class="form-control form-control-sm datepicker" data-date-format="mm/dd/yyyy" id="birthdate"  style="max-height: 12px;"  name="birthdate" maxlength="12" required>
-                <span class="input-group-append">
-                  <span class="input-group-text bg-light d-block" style="max-height: 33px;">
-                    <i class="bi bi-calendar3"></i>
-                  </span>
-                </span>
-                <div class="invalid-feedback">
-                  Please select a valid birthday.
-                </div>
-              </div>
-            </div>
-            <div class="form-group col-md-2">
-              <label for="age" class="col-form-label col-form-label-sm font-weight-bold">Age:</label>
-              <input type="number" class="form-control form-control-sm" id="age" name="age" maxlength="12"  onKeyPress="if(this.value.length==4) return false;" required>
-              <div class="invalid-feedback">
-                Please enter a valid age.
-              </div>
-            </div>
-            <div class="form-group col-md-4">
-              <label for="placeOfBirth" class="col-form-label col-form-label-sm font-weight-bold">Place of Birth:</label>
-              <input type="input" class="form-control form-control-sm" id="placeOfBirth" name="placeOfBirth" maxlength="45"required>
-              <div class="invalid-feedback">
-                Please enter a valid place of birth.
-              </div>
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="form-group col-md-8">
-              <label for="address" class="col-form-label col-form-label-sm font-weight-bold">Address:</label>
-              <textarea id="address" name="address" cols="36" rows="2" class="form-control" required></textarea>
-              <div class="invalid-feedback">
-                Please enter a valid address.
-              </div>
-            </div>
-            <div class="form-group col-md-4">
-              <label for="mobileNo" class="col-form-label col-form-label-sm font-weight-bold">Mobile No:</label>
-              <input type="number" class="form-control form-control-sm" id="mobileNo" name="mobileNo" maxlength="20"  onKeyPress="if(this.value.length==18) return false;"  required>
-              <div class="invalid-feedback">
-                Please enter a valid mobile no.
-              </div>
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="form-group col-md-3">
-              <label for="height" class="col-form-label col-form-label-sm font-weight-bold">Height (must be in CMS):</label>
-              <input type="number" class="form-control form-control-sm" id="height" name="height" maxlength="8"  onKeyPress="if(this.value.length==5) return false;"  required>
-              <div class="invalid-feedback">
-                Please enter a valid height.
-              </div>
-            </div>
-            <div class="form-group col-md-3">
-              <label for="weight" class="col-form-label col-form-label-sm font-weight-bold">Weight (must be in KGS):</label>
-              <input type="number" class="form-control form-control-sm" id="weight" name="weight" maxlength="8"  onKeyPress="if(this.value.length==5) return false;"  required>
-              <div class="invalid-feedback">
-                Please enter a valid weight.
-              </div>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="weight" class="col-form-label col-form-label-sm font-weight-bold">&nbsp;</label>
-              <div id="heightHelpBlock" class="form-text text-muted" style="font-size: 12px; font-style: oblique;">
-                ( Click this link for weight and height conversion: <a href="https://www.albireo.ch/bodyconverter/" target="_blank">Converter</a> )
-              </div>
-            </div>
-          </div>
-
-          <div class="row g-3">
-            <div class="form-group col-md-6">
-              <label for="fatherName" class="col-form-label col-form-label-sm font-weight-bold">Father's Name:</label>
-              <input type="text" class="form-control form-control-sm" id="fatherName" name="fatherName" maxlength="68" required>
-              <div class="invalid-feedback">
-                Please enter a valid father's name.
-              </div>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="motherName" class="col-form-label col-form-label-sm font-weight-bold">Mother's Name:</label>
-              <input type="text" class="form-control form-control-sm" id="motherName" name="motherName" maxlength="68" required>
-              <div class="invalid-feedback">
-                Please enter a valid mother's name.
-              </div>
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="form-group col-md-3">
-              <label for="noOfBrothers" class="col-form-label col-form-label-sm font-weight-bold">No. of Brothers:</label>
-              <input type="number" class="form-control form-control-sm" id="noOfBrothers" name="noOfBrothers" maxlength="8"  onKeyPress="if(this.value.length==4) return false;"  value="" required>
-              <div class="invalid-feedback">
-                Please put 0 if not applicable.
-              </div>
-            </div>
-            <div class="form-group col-md-3">
-              <label for="noOfSisters" class="col-form-label col-form-label-sm font-weight-bold">No. of Sisters:</label>
-              <input type="number" class="form-control form-control-sm" id="noOfSisters" name="noOfSisters" maxlength="68" value=""  onKeyPress="if(this.value.length==4) return false;"  required>
-              <div class="invalid-feedback">
-                Please put 0 if not applicable.
-              </div>
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="form-group col-md-8">
-              <label for="spouseName" class="col-form-label col-form-label-sm font-weight-bold">Husband's Name:</label>
-              <input type="text" class="form-control form-control-sm" id="spouseName" name="spouseName" maxlength="68" required>
-              <div class="invalid-feedback">
-                Put NA if not applicable.
-              </div>
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="form-group col-md-3">
-              <label for="noOfChildren" class="col-form-label col-form-label-sm font-weight-bold">No. of Children:</label>
-              <input type="number" class="form-control form-control-sm" id="noOfChildren" name="noOfChildren" maxlength="8" value=""   onKeyPress="if(this.value.length==4) return false;"  required>
-              <div class="invalid-feedback">
-                Please put 0 if not applicable.
-              </div>
-            </div>
-            <div class="form-group col-md-3">
-              <label for="ageOfEldestChild" class="col-form-label col-form-label-sm font-weight-bold">How old is your Eldest:</label>
-              <input type="number" class="form-control form-control-sm" id="ageOfEldestChild" name="ageOfEldestChild" maxlength="8" value=""  onKeyPress="if(this.value.length==4) return false;"  required>
-              <div class="invalid-feedback">
-                Please put 0 if not applicable.
-              </div>
-            </div>
-            <div class="form-group col-md-4">
-              <label for="ageOfYoungestChild" class="col-form-label col-form-label-sm font-weight-bold">How old is your Youngest:</label>
-              <input type="number" class="form-control form-control-sm" id="ageOfYoungestChild" name="ageOfYoungestChild" maxlength="8" value=""  onKeyPress="if(this.value.length==4) return false;"  required>
-              <div class="invalid-feedback">
-                Please put 0 if not applicable.
-              </div>
-            </div>
-          </div>
-          <br>
-          <br>
-          <h5><strong>Educational Background</strong></h5>
-          <hr>
-          <div class="row g-3">
-            <div class="form-group col-md-10">
-              <label for="nameOfSchool" class="col-form-label col-form-label-sm font-weight-bold">Name Of School (High School):</label>
-              <input type="text" class="form-control form-control-sm" id="nameOfSchool" name="nameOfSchool" maxlength="108" value="" required>
-              <div class="invalid-feedback">
-                Please enter a valid name of school.
-              </div>
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="form-group col-md-3">
-              <label for="yearGraduated" class="col-form-label col-form-label-sm font-weight-bold">Year Graduated:</label>
-              <input type="number" class="form-control form-control-sm" id="yearGraduated" name="yearGraduated" onKeyPress="if(this.value.length==4) return false;"  value="" required>
-              <div class="invalid-feedback">
-                Please enter a year graduated.
-              </div>
-            </div>
-          </div>
-          <hr>
-          <div class="row g-3">
-            <div class="form-group col-md-10">
-              <label for="nameOfSchool2" class="col-form-label col-form-label-sm font-weight-bold">Name Of School (College/Vocational):</label>
-              <input type="text" class="form-control form-control-sm" id="nameOfSchool2" name="nameOfSchool2" maxlength="108" value="" required>
-              <div class="invalid-feedback">
-                Please enter a valid name of school.
-              </div>
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="form-group col-md-9">
-              <label for="course" class="col-form-label col-form-label-sm font-weight-bold">Course Taken:</label>
-              <input type="text" class="form-control form-control-sm" id="course" name="course" maxlength="108" value=""  required>
-              <div class="invalid-feedback">
-                Please enter a valid course.
-              </div>
-            </div>
-            <div class="form-group col-md-3">
-              <label for="yearGraduated" class="col-form-label col-form-label-sm font-weight-bold">Year Graduated:</label>
-              <input type="number" class="form-control form-control-sm" id="yearGraduated2" name="yearGraduated2" onKeyPress="if(this.value.length==4) return false;" required>
-              <div class="invalid-feedback">
-                Please enter a valid Year Graduated.
-              </div>
-            </div>
-          </div>
-          <hr>
-          <br>
-          <br>
-          <h5><strong>Employment Background</strong></h5>
-          <hr>
-          <div class="row g-3">
-            <div class="form-group col-md-7">
-              <label for="nameOfEmployer" class="col-form-label col-form-label-sm font-weight-bold">1) Name of Employer:</label>
-              <input type="text" class="form-control form-control-sm" id="nameOfEmployer" name="nameOfEmployer" maxlength="108" value=""  required>
-              <div class="invalid-feedback">
-                Please enter a valid name of employer.
-              </div>
-            </div>
-            <div class="form-group col-md-5">
-              <label for="course" class="col-form-label col-form-label-sm font-weight-bold">Position:</label>
-              <input type="text" class="form-control form-control-sm" id="position" name="position" maxlength="80" value=""  required>
-              <div class="invalid-feedback">
-                Please enter a valid position.
-              </div>
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="form-group col-md-3">
-              <label for="yearFrom" class="col-form-label col-form-label-sm font-weight-bold">From (Year):</label>
-              <input type="number" class="form-control form-control-sm" id="yearFrom" name="yearFrom" maxlength="5"  onKeyPress="if(this.value.length==4) return false;"  value="" required>
-              <div class="invalid-feedback">
-                Please enter a valid Year From.
-              </div>
-            </div>
-            <div class="form-group col-md-3">
-              <label for="yearTo" class="col-form-label col-form-label-sm font-weight-bold">To (Year):</label>
-              <input type="number" class="form-control form-control-sm" id="yearTo" name="yearTo" maxlength="5"  onKeyPress="if(this.value.length==4) return false;"  value="" required>
-              <div class="invalid-feedback">
-                Please enter a valid Year To.
-              </div>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="countryEmployer" class="col-form-label col-form-label-sm font-weight-bold">Country</label>
-              <select id="countryEmployer" name="countryEmployer" class="form-select form-select-sm" required>
-                <option selected disabled>Choose Country</option>
-                <option value="asas">Choose Country222</option>
-              </select>
-              <div class="invalid-feedback">
-                Please enter a country.
-              </div>
-            </div>
-          </div>
-
-          <hr>
-          <div class="row g-3">
-            <div class="form-group col-md-7">
-              <label for="course" class="col-form-label col-form-label-sm font-weight-bold">2) Name of Employer:</label>
-              <input type="text" class="form-control form-control-sm" id="nameOfEmployer1" name="nameOfEmployer1" maxlength="108" value=""  >
-              <div class="invalid-feedback">
-                Please enter a valid name of employer.
-              </div>
-            </div>
-            <div class="form-group col-md-5">
-              <label for="course" class="col-form-label col-form-label-sm font-weight-bold">Position:</label>
-              <input type="text" class="form-control form-control-sm" id="position1" name="position1" maxlength="80" value=""  >
-              <div class="invalid-feedback">
-                Please enter a valid position.
-              </div>
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="form-group col-md-3">
-              <label for="yearFrom" class="col-form-label col-form-label-sm font-weight-bold">From (Year):</label>
-              <input type="number" class="form-control form-control-sm" id="yearFrom1" name="yearFrom1" maxlength="5"  onKeyPress="if(this.value.length==4) return false;"  value="" >
-              <div class="invalid-feedback">
-                Please enter a valid Year From.
-              </div>
-            </div>
-            <div class="form-group col-md-3">
-              <label for="yearTo" class="col-form-label col-form-label-sm font-weight-bold">To (Year):</label>
-              <input type="number" class="form-control form-control-sm" id="yearTo1" name="yearTo1" maxlength="5"  onKeyPress="if(this.value.length==4) return false;"  value="" >
-              <div class="invalid-feedback">
-                Please enter a valid Year To.
-              </div>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="countryEmployer1" class="col-form-label col-form-label-sm font-weight-bold">State</label>
-              <select id="countryEmployer1" name="countryEmployer1" class="form-select form-select-sm" >
-                <option selected disabled>Choose Country</option>
-              </select>
-              <div class="invalid-feedback">
-                Please enter a country.
-              </div>
-            </div>
-          </div>
-
-          <hr>
-          <div class="row g-3">
-            <div class="form-group col-md-7">
-              <label for="nameOfEmployer2" class="col-form-label col-form-label-sm font-weight-bold">3) Name of Employer:</label>
-              <input type="text" class="form-control form-control-sm" id="nameOfEmployer2" name="nameOfEmployer2" maxlength="108" value=""  >
-              <div class="invalid-feedback">
-                Please enter a valid name of employer.
-              </div>
-            </div>
-            <div class="form-group col-md-5">
-              <label for="position2" class="col-form-label col-form-label-sm font-weight-bold">Position:</label>
-              <input type="text" class="form-control form-control-sm" id="position2" name="position2" maxlength="80" value=""  >
-              <div class="invalid-feedback">
-                Please enter a valid position.
-              </div>
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="form-group col-md-3">
-              <label for="yearFrom2" class="col-form-label col-form-label-sm font-weight-bold">From (Year):</label>
-              <input type="number" class="form-control form-control-sm" id="yearFrom2" name="yearFrom2" maxlength="5"  onKeyPress="if(this.value.length==4) return false;"  value="" >
-              <div class="invalid-feedback">
-                Please enter a valid Year From.
-              </div>
-            </div>
-            <div class="form-group col-md-3">
-              <label for="yearTo2" class="col-form-label col-form-label-sm font-weight-bold">To (Year):</label>
-              <input type="text" class="form-control form-control-sm" id="yearTo2" name="yearTo2" maxlength="5"  onKeyPress="if(this.value.length==4) return false;"  value="" >
-              <div class="invalid-feedback">
-                Please enter a valid Year To.
-              </div>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="countryEmployer2" class="col-form-label col-form-label-sm font-weight-bold">Country</label>
-              <select id="countryEmployer2" name="countryEmployer2" class="form-select form-select-sm" >
-                <option selected disabled>Choose Country</option>
-              </select>
-              <div class="invalid-feedback">
-                Please enter a country.
-              </div>
-            </div>
-          </div>
-          <hr>
-          <br>
-          
-          <div id="caretakerPart">
-          	  <h6><strong>To be filled up by Caretaker Applicant Only</strong></h6>
-          	  <hr>
-	          <div class="row mb-3 g-3">
-	            <label for="optionBaby" class="col-sm-5 col-form-label col-form-label-sm"  style="font-size: 11px;">2) Do you have experience in taking care of babies?</label>
-	            <div class="col-sm-2">
-	              <select id="optionBaby" name="optionBaby" class="form-select form-select-sm">
-	                <option value="No">No</option>
-	                <option value="Yes">Yes</option>
-	              </select>
-	            </div>
-	            <div class="col-sm-4"></div>
-	          </div>
-	          <div class="row g-3">
-	            <div class="form-group col-md-12">
-	              <label for="optionBabyYes" class="col-form-label col-form-label-sm font-weight-bold"  style="font-size: 11px;">If Yes: Please write down the age and gender, and how long you take care of them:</label>
-	              <textarea class="form-control" name="optionBabyYes" id="optionBabyYes" rows="2" cols="15" style="width: 60%;" required></textarea>
-	              <div class="invalid-feedback" id="optionBabyYesText">
-	              	Please put NA if not applicable.
-	              </div>
-	            </div>
-	          </div>
-	
-	          <br>
-	          <div class="row mb-3 g-3">
-	            <label for="optionElderly" class="col-sm-5 col-form-label col-form-label-sm"  style="font-size: 11px;">2) Do you have experience in taking care of elderly?</label>
-	            <div class="col-sm-2">
-	              <select id="optionElderly" name="optionElderly" class="form-select form-select-sm">
-	                <option value="No">No</option>
-	                <option value="Yes">Yes</option>
-	              </select>
-	            </div>
-	            <div class="col-sm-4"></div>
-	          </div>
-	          <div class="row g-3">
-	            <div class="form-group col-md-12">
-	              <label for="optionBabyYes" class="col-form-label col-form-label-sm font-weight-bold"  style="font-size: 11px;">If YES: Please write down the age and gender, their condition (bedridden, diabetic
-	                etc.) and how long you take care of them:</label>
-	              <textarea class="form-control" name="optionElderlyYes" id="optionElderlyYes" rows="2" cols="15" style="width: 60%;" required></textarea>
-	              <div class="invalid-feedback" id="optionElderlyYesText">
-	              	Please put NA if not applicable.
-	              </div>
-	            </div>
-	          </div>
-          </div>
-          
-
-          <hr>
-          <h5>Upload Required Files:</h5>
-          <div class="row g-3">
-            <div class="form-group col-md-6">
-              <p></p>
-              <label for="passport" class="col-sm-6 col-form-label col-form-label-sm"  style="font-size: 11px;">Upload UMID (Required)</label>
-              <div class="custom-file">
-                <input type="file" class="custom-file-input form-control form-control-sm" id="umid" name="umid" required>
-              </div>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="photo" class="col-sm-12 col-form-label col-form-label-sm" style="font-size: 11px;">Upload Whole Body Picture (White Background in Casual attire) for
-                CARETAKERS / 2x2 picture for FACTORY WORKERS (Required)</label>
-              <div class="custom-file">
-                <input type="file" class="custom-file-input form-control form-control-sm" id="photo" name="photo" required>
-              </div>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="birthCert" class="col-sm-12 col-form-label col-form-label-sm" style="font-size: 11px;">Upload Clear Copy of Birth Certificate</label>
-              <div class="custom-file">
-                <input type="file" class="custom-file-inpu form-control form-control-sm" id="birthCert" name="birthCert">
-              </div>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="passport" class="col-sm-6 col-form-label col-form-label-sm" style="font-size: 11px;">Upload Passport</label>
-              <div class="custom-file">
-                <input type="file" class="custom-file-input form-control form-control-sm" id="passport" name="passport">
-              </div>
-            </div>
-          </div>
-          <br/>
-          <!-- <div class="row g-3">
-            <div class="col-sm-4">
-              <label><span style="font-weight: bold;" id="captchaVerify">Captcha Verification</span></label> 
-              <div class="g-recaptcha" data-sitekey="6Lcfcq0hAAAAAOiTRwcekCVSaIbNRlXCP9lXfFLG"></div>
-            </div>
-          </div> -->
-          <br>
-          <hr>
-          <div class="float-end">
-            <input type="submit" id="submitBtn" class="btn btn-primary" value="Submit Application">
-            <input type="hidden" name="type" value="" id="type">
-            <input type="hidden" name="captcha" value="" id="captcha">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-          </div>
-        </form>
-      </div>
-
-    </div>
-  </div>
+    <!-- The Modal -->
+    <?PHP include 'modal.html'; ?>
+    <!-- The Model -->
 </div>
   
   <!-- Vendor JS Files -->

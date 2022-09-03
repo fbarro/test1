@@ -297,53 +297,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// // Example starter JavaScript for disabling form submissions if there are invalid fields
-// (function () {
-//   'use strict'
-
-//   // Fetch all the forms we want to apply custom Bootstrap validation styles to
-//   var forms = document.querySelectorAll('.needs-validation')
-
-//   // Loop over them and prevent submission
-//   Array.prototype.slice.call(forms)
-//     .forEach(function (form) {
-//       form.addEventListener('submit11', function (event) {
-//         if (!form.checkValidity()) {
-//           event.preventDefault()
-//           event.stopPropagation()
-//         } else {
-//         	$j.ajax({
-//                 type:'POST',
-//                 url:'submit_form.php',
-//                 data:'contactFrmSubmit=1&name='+name+'&email='+email+'&message='+message,
-//                 beforeSend: function () {
-//                     $('.submitBtn').attr("disabled","disabled");
-//                     $('.modal-body').css('opacity', '.5');
-//                 },
-//                 success:function(msg){
-//                     if(msg == 'ok'){
-//                         $('#inputName').val('');
-//                         $('#inputEmail').val('');
-//                         $('#inputMessage').val('');
-//                         $('.statusMsg').html('<span style="color:green;">Thanks for contacting us, we\'ll get back to you soon.</p>');
-//                     }else{
-//                         $('.statusMsg').html('<span style="color:red;">Some problem occurred, please try again.</span>');
-//                     }
-//                     $('.submitBtn').removeAttr("disabled");
-//                     $('.modal-body').css('opacity', '');
-//                 }, 
-//                 error: function(e){
-//                 	$('.statusMsg').html('<span style="color:red;">Some problem occurred, please try again.</span>');
-//                 }
-//             });
-//         }
-
-//         form.classList.add('was-validated')
-//       }, false)
-//     })
-// })()
-
-
 var $j = jQuery.noConflict();
 jQuery(document).ready(function(){
   let countryEmployerObj = $j("#countryEmployer");
@@ -378,6 +331,16 @@ jQuery(document).ready(function(){
 	// 	  $j('#caretakerPart').addClass('d-none');
 	//   }
   // });
+
+  let type = '';
+  $j.each(document.location.search.substr(1).split('&'),function(c,q){
+    let i = q.split('=');
+    if(i && i[0]==='type'){
+      type = i[1]
+    }
+  });
+  // console.log(type);
+  $j('#type').val(type);
 });
 
 const validFields = {'positionApplied' : 'Position Applied For',
@@ -395,19 +358,20 @@ const validFields = {'positionApplied' : 'Position Applied For',
 'nameOfEmployer2' :'Name Of Employer~NR', 'position2' : 'Position~NR', 'yearFrom2' : 'Year (From)~NR', 'yearTo2' : 'Year (To)~NR', 'countryEmployer2' : 'Country~NR'};
 
 (function() {
+ 
   'use strict';
   $j(window).on('load', function() {
-    $j('.needs-validation').on('submit', function(e) {
-      
-      if (!this.checkValidity()) {
-        e.preventDefault();
-        e.stopPropagation();
-      } else {
-        submitContactForm(this, e);
-      }
+      $j('.needs-validation').on('submit', function(e) {
+        
+        if (!this.checkValidity()) {
+          e.preventDefault();
+          e.stopPropagation();
+        } else {
+          submitContactForm(this, e);
+        }
 
-      $j(this).addClass('was-validated');
-    });
+        $j(this).addClass('was-validated');
+      });
   });
 })();
 
@@ -415,40 +379,16 @@ function submitContactForm(formData, event){
     event.preventDefault();
     event.stopPropagation();
 
-    // let dataForm = '';
-    // let ctr = 0;
-    // let len = list.length;
-    // for(var key in list) {
-    //    let keyVal = key +'='+$j('#'+key).val();;
-       
-    //    dataForm = dataForm + keyVal;
-
-    //    ctr++;
-    //    if(len<ctr) dataForm = dataForm + '&';
+    // let captchaResp = grecaptcha.getResponse();
+    // if(captchaResp==''){
+    //   alert("Captcha verification failed, please try again.");
+    //   return false;
     // }
 
+    // $j('#captcha').val(captchaResp);
+    // formData.append('captcha', grecaptcha.getResponse());
     var fd = new FormData(formData);
-    // var umid = $('#umid')[0].files;
-    // var photo = $('#photo')[0].files;
-    // var birthCert = $('#birthCert')[0].files;
-    // var passport = $('#passport')[0].files;
-
-    // if(umid.length > 0 ){
-    //   fd.append('umid',umid[0]);
-    // }
-
-    // if(photo.length > 0 ){
-    //   fd.append('photo',photo[0]);
-    // }
-
-    // if(birthCert.length > 0 ){
-    //   fd.append('birthCert',birthCert[0]);
-    // }
-
-    // if(passport.length > 0 ){
-    //   fd.append('passport',passport[0]);
-    // }
-
+    loadingBlockShow();
     $j.ajax({
       type:'POST',
       url:'submit_form.php',
@@ -463,17 +403,21 @@ function submitContactForm(formData, event){
         console.log(msg);
           if(msg == 'ok'){
               alert('Thanks for submitting your application to us, we\'ll get back to you soon');
-          } else if(msg == 'invalid'){
-              alert('Please fill up required fields.');
-          }else{
-              alert('Something went wrong, please try again.');
+              $j("#profileform")[0].reset(); 
+              $j("#myModal").modal('hide');
+          } else {
+            alert(msg);
           }
+
           $j('#submitBtn').removeAttr("disabled");
-          $j("#profileform")[0].reset(); 
+          loadingBlockHide();
+         
       },
       error: function (jqXHR, textStatus, errorThrown) { 
          $j('.submitBtn').removeAttr("disabled");
          alert('Something went wrong, please try again.');
+         loadingBlockHide();
       }
   });
 }
+
