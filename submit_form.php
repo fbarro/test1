@@ -64,7 +64,7 @@
         echo $msg;die;
     }
 
-    // $secret = "6Lcfcq0hAAAAAH6K86gJge47TQ9xDncCccF3Fce9"; 
+    // $secret = ""; 
     // $response = $_POST["captcha"];
 
     // error_log($response);
