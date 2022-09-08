@@ -670,7 +670,8 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-recaptcha-site-key="6LfB6aQhAAAAAHorB48qA4icB8vOKAHOLgG7K2Ll">
+            <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form"> -->
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" maxlength="50" required>
@@ -684,6 +685,12 @@
               </div>
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" placeholder="Message" maxlength="500" required></textarea>
+              </div>
+              <div class="row g-3">
+                <div class="col-sm-4">
+                  <label><span style="font-weight: bold;" id="captchaVerify">Captcha Verification</span></label> 
+                  <div class="g-recaptcha" data-sitekey="6Lcfcq0hAAAAAOiTRwcekCVSaIbNRlXCP9lXfFLG"></div>
+                </div>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
@@ -790,7 +797,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-  <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfB6aQhAAAAAHorB48qA4icB8vOKAHOLgG7K2Ll"></script>
   <script src="assets/js/loading.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/cookie-alert.js"></script>
